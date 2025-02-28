@@ -2,6 +2,7 @@ import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import {
   provideRouter,
+  withHashLocation,
   withInMemoryScrolling,
   withViewTransitions,
 } from '@angular/router';
@@ -27,11 +28,11 @@ export const appConfig: ApplicationConfig = {
       routes,
       withInMemoryScrolling({ scrollPositionRestoration: 'enabled' }),
       withViewTransitions()
-      // withHashLocation()
+      withHashLocation()
     ),
     provideHttpClient(
       withFetch(),
-      withInterceptors([tokenInterceptor, spinnerInterceptor])
+      withInterceptors([tokenInterceptor, spinnerInterceptor]),
     ), // SSR
     provideClientHydration(withEventReplay()),
     provideAnimations(),
