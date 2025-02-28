@@ -11,7 +11,7 @@ export const serverRoutes: ServerRoute[] = [
   // },
   {
     path: '**',
-    renderMode: RenderMode.Server, // ! SSG >> Static Site Generation >> HTML with all the data >> Best for server >> Best For SEO >> Pages Like About us contact us privacy policy
+    renderMode: RenderMode.Prerender, // ! SSG >> Static Site Generation >> HTML with all the data >> Best for server >> Best For SEO >> Pages Like About us contact us privacy policy
   },
   // {
   //   path: '**',
