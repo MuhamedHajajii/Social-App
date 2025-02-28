@@ -27,12 +27,12 @@ export const appConfig: ApplicationConfig = {
     provideRouter(
       routes,
       withInMemoryScrolling({ scrollPositionRestoration: 'enabled' }),
-      withViewTransitions()
+      withViewTransitions(),
       withHashLocation()
     ),
     provideHttpClient(
       withFetch(),
-      withInterceptors([tokenInterceptor, spinnerInterceptor]),
+      withInterceptors([tokenInterceptor, spinnerInterceptor])
     ), // SSR
     provideClientHydration(withEventReplay()),
     provideAnimations(),
