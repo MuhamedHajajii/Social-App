@@ -37,6 +37,7 @@ export const routes: Routes = [
       ),
     canActivate: [authGuard],
     children: [
+      { path: '', redirectTo: 'timeline', pathMatch: 'full' },
       {
         path: 'timeline',
         loadComponent: () =>
